@@ -1,12 +1,12 @@
 package br.com.amber.casadocodigo.entidades;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.Tables;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "nome",name = "categoria_uk"))
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
