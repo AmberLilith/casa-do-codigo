@@ -18,10 +18,10 @@ public class AutorController {
     private AutorService service;
 
     @PostMapping("/cadastrar")
-    public ResponseEntity<Autor> register(@RequestBody AutorDto autorDto){
+    public ResponseEntity<?> register(@RequestBody AutorDto autorDto){
         System.out.println(autorDto.toString());
         Autor autor = autorDto.converter();
         service.save(autor);
-        return ResponseEntity.ok().body(autor);
+        return ResponseEntity.ok().body(autorDto);
     }
 }
