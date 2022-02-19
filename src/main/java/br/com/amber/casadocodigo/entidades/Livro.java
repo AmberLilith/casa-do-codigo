@@ -37,4 +37,7 @@ public class Livro {
     private Long idCategoria;
     @NotNull
     private Long idAutor;
+
+    public Livro() {
+    }
 }
