@@ -16,4 +16,8 @@ public class Categoria {
 
     public Categoria() {
     }
+
+    public Categoria(String nome) {
+        this.nome = nome;
+    }
 }

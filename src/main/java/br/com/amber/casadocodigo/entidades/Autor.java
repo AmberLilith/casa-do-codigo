@@ -24,7 +24,7 @@ public class Autor {
     @NotNull
     @Length(max = 400)
     private String descricao;
-    private final LocalDateTime dataRegistro = LocalDateTime.now();
+    private LocalDateTime dataRegistro;
 
     public Autor() {
     }
@@ -33,5 +33,6 @@ public class Autor {
         this.nome = nome;
         this.email = email;
         this.descricao = descricao;
+        this.dataRegistro = LocalDateTime.now();
     }
 }
